@@ -1,13 +1,10 @@
-import React from 'react';
-import Auth from "../components/Auth";
+import React from 'react'
+import Auth from "../components/Auth/InscriptionForm";
 
 const Inscription = () => {
     return (
         <div>
-           <Auth />
-           <div>
-                    // Image
-            </div>
+            <Auth />
         </div>
     )
 }

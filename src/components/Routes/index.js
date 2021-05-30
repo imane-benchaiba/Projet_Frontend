@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Accueil from "./pages/Accueil";
-import Connexion from "./pages/Connexion";
-import Inscription from "./pages/Inscription";
-import Home from "./pages/Home";
+import Accueil from "../../pages/Accueil";
+import Connexion from "../../pages/Connexion";
+import Inscription from "../../pages/Inscription";
+import Home from "../../pages/Home";
 
 const index = () => {
     return (

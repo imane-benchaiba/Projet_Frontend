@@ -1,14 +1,11 @@
 import React from 'react';
-import Auth from "../components/Auth";
+import Auth from "../components/Auth/ConnexionForm";
 
 const Connexion = () => {
     return (
         <div>
             <div>
                 <Auth /> 
-                <div>
-                    // image  
-                </div>
             </div>
         </div>
     )
