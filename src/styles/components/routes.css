@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Quicksand:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../../img/background4.jpg");
+  background-position: center top;
+  background-size: cover;
+}
+
+li,
+link,
+.button__connexion,
+.button__inscription {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+header {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 10%;
+}
+
+.logo {
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 20px;
+  color: #a40000;
+}
+
+.nav__links {
+  list-style: none;
+  text-decoration: none;
+}
+.nav__links li {
+  display: inline-block;
+  padding: 0px 10px;
+  text-decoration: none;
+}
+
+.button__connexion,
+.button__inscription {
+  padding: 9px 0px;
+  width: 130px;
+  border: 2px solid #a40000;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.button__connexion {
+  background-color: #a40000;
+  color: #edf0f1;
+}
+
+.button__inscription {
+  background: none;
+  border: 2px solid #a40000;
+  color: #a40000;
+}
+
+.button__connexion:hover,
+.button__inscription:hover {
+  background-color: #c80000;
+}
