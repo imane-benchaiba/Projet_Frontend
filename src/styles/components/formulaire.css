@@ -1,0 +1,114 @@
+.container__connexionForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10%;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 20px;
+}
+.form__connexion,
+.form__inscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  min-height: 80vh;
+  width: 50%;
+  border-radius: 2rem;
+  padding: 10px;
+}
+.bienvenue {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+label {
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+label span {
+  font-size: 12px;
+  color: #a40000;
+  text-transform: uppercase;
+}
+input,
+.bouton__form {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+.bouton__form {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background: #a40000;
+}
+.bouton__form:hover {
+  background-color: #c80000;
+}
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.forgot-pass {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #a40000;
+}
+.form__connexionExt,
+.form__inscriptionExt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.bouton__formExt {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 30px;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background: none;
+  border: 2px solid #a40000;
+  color: #a40000;
+}
+.bouton__formExt:hover {
+  background-color: #c80000;
+  color: white;
+}

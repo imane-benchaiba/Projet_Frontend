@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Quicksand:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -22,6 +23,7 @@ link,
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
+  height: 36px;
 }
 
 header {
@@ -57,7 +59,6 @@ header {
 
 .button__connexion,
 .button__inscription {
-  padding: 9px 0px;
   width: 130px;
   border: 2px solid #a40000;
   border-radius: 50px;
@@ -78,4 +79,7 @@ header {
 .button__connexion:hover,
 .button__inscription:hover {
   background-color: #c80000;
+}
+.button__inscription:hover {
+  color: white;
 }

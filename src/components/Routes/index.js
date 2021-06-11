@@ -21,14 +21,14 @@ const index = () => {
                       </nav>                                           
                 </header>
                   <Switch>
-                    <Route path="/">
-                      <Accueil />
-                    </Route>
                     <Route path="/connexion">
                       <Connexion />
                     </Route>
                     <Route path="/inscription">
                       <Inscription />
+                    </Route>
+                    <Route path="/">
+                      <Accueil />
                     </Route>
                   </Switch>
                   </div>    

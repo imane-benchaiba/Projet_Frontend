@@ -13,8 +13,8 @@ const Accueil = () => {
                 <p className="slogan">Trouvez votre prochaine lecture</p>
             </div>
             
-            <div class="search__container">
-               <input class="search__input" type="text" placeholder="Chercher un livre, un auteur..."></input>
+            <div className="search__container">
+               <input className="search__input" type="text" placeholder="Chercher un livre, un auteur..."></input>
             </div>
             <div className="third__container">
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#a40000" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
