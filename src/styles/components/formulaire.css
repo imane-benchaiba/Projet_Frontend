@@ -29,17 +29,19 @@
   font-size: 30px;
   text-align: center;
 }
+form {
+  text-align: center;
+}
 label {
   display: block;
   width: 260px;
   margin: 25px auto 0;
   text-align: center;
-}
-label span {
   font-size: 12px;
   color: #a40000;
   text-transform: uppercase;
 }
+
 input,
 .bouton__form {
   font-family: "Quicksand", sans-serif;
@@ -111,4 +113,10 @@ input {
 .bouton__formExt:hover {
   background-color: #c80000;
   color: white;
+}
+.error {
+  font-family: "Quicksand", sans-serif;
+  font-size: 10px;
+  color: red;
+  font-weight: bold;
 }

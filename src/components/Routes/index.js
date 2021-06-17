@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Accueil from "../../pages/Accueil";
-import Connexion from "../../pages/Connexion";
-import Inscription from "../../pages/Inscription";
+import SignIn from "../../pages/SignIn";
+import SignUp from "../../pages/SignUp";
 
 const index = () => {
     return (
@@ -22,10 +22,10 @@ const index = () => {
                 </header>
                   <Switch>
                     <Route path="/connexion">
-                      <Connexion />
+                      <SignIn />
                     </Route>
                     <Route path="/inscription">
-                      <Inscription />
+                      <SignUp />
                     </Route>
                     <Route path="/">
                       <Accueil />

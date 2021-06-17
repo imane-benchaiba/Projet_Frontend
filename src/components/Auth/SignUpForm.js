@@ -1,10 +1,13 @@
 import React from 'react';
-import Connexion from "../../pages/Connexion";
+import { useHistory } from "react-router-dom";
 
-const InscriptionForm = () => {
-    const transition = () => {
-        return document.querySelector('.cont').classList.toggle('s--signup');
-      }
+const SignUpForm = () => {
+
+    const history = useHistory();
+    const redirection = () => {
+        const url = "/connexion";
+        history.push(url);
+    }
     return (
         <div className="container__connexionForm">
             <div className="form__inscription">
@@ -25,11 +28,11 @@ const InscriptionForm = () => {
                     <div className="form__inscriptionExt">
                         <h2>Êtes-vous membre?</h2>
                         <p>Si vous avez déjà un compte, connectez-vous.</p>
-                        <button type="button" className="bouton__formExt">Se connecter</button>   
+                        <button type="button" className="bouton__formExt" onClick={redirection}>Se connecter</button>   
                     </div>                  
             </div>
         </div>
     )
 }
 
-export default InscriptionForm
+export default SignUpForm
