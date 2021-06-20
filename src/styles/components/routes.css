@@ -26,7 +26,7 @@ link,
   height: 36px;
 }
 
-header {
+.navbar {
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),

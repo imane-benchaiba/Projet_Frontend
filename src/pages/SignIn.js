@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Auth from "../components/Auth/SignInForm";
+import { UidContext } from "../components/AppContext";
 
 const SignIn = () => {
+    const uid = useContext(UidContext);
     return (
         <div>
-            <Auth/>
-
+            {uid ? (
+                <h1>Bienvenue dans votre fil d'actualité</h1>
+            ) : (
+               <Auth/> 
+            )}
         </div>
     )
 }
