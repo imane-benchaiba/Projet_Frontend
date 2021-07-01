@@ -1,29 +1,33 @@
-import Routes from "./components/Routes";
 import React, { useEffect, useState } from "react";
+import Routes from "./components/Routes";
 import { UidContext } from "./components/AppContext";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { getUser } from "./actions/user.actions";
 
-
-function App() {
+const App = () => {
   const [uid, setUid] = useState(null);
-  useEffect( () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
     const fetchToken = async () => {
-    await axios({
-      method: "get",
-      url: `${process.env.REACT_APP_API_URL}jwtid`,
-      //withCredentials: true,
-    })
-     .then((res) => {
-        console.log(res);
-        setUid(res.data)
+      await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_API_URL}jwtid`,
+        withCredentials: true,
       })
-     .catch((err) => console.log("No token"));
-  };
-  fetchToken();
-  }, [uid]);
+        .then((res) => {
+          setUid(res.data);
+        })
+        .catch((err) => console.log("No token"));
+    };
+    fetchToken();
+
+    if (uid) dispatch(getUser(uid));
+  }, [uid, dispatch]);
   return (
     <div className="app">
-      <UidContext.Provider value={uid} >
+      <UidContext.Provider value={uid}>
         <Routes />
       </UidContext.Provider>
     </div>

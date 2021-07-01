@@ -46,7 +46,23 @@ link,
   font-size: 20px;
   color: #a40000;
 }
-
+.nav__ext {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav__ext p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: black;
+  padding-right: 50px;
+}
+.iconLogout{
+  width: 40px;
+  cursor: pointer;
+}
 .nav__links {
   list-style: none;
   text-decoration: none;

@@ -1,3 +1,5 @@
 @import "./components/routes.css";
 @import "./pages/accueil.css";
 @import "./components/formulaire.css";
+@import "./components/leftnav.css";
+@import "./pages/profil.css";

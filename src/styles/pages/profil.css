@@ -1,0 +1,37 @@
+.profil__container {
+    display: flex;
+  justify-content: center;
+  padding: 10px 10%;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 20px;
+    
+}
+.update__container{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  min-height: 70vh;
+  width: 80%;
+  border-radius: 2rem;
+  padding: 10px;
+}
+
+.left__part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.left__part img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: 0 0 2px rgba(51, 51, 51, 0.376);
+}

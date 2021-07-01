@@ -2,7 +2,6 @@ import React from 'react';
 import Image1 from "../img/cheremamie.jpg";
 import Image2 from "../img/sharko.jpg";
 import Image3 from "../img/puzzle.jpg";
-import Image4 from "../img/vertige.jpg";
 
 
 const Accueil = () => {
