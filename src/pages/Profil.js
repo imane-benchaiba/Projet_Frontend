@@ -4,7 +4,7 @@ import UpdateProfil  from '../components/Profil/UpdateProfil';
 const Profil = () => {
     
     return (
-        <div>
+        <div >
             <UpdateProfil />
         </div>
     )

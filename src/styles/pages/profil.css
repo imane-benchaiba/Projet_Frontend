@@ -35,6 +35,23 @@
   object-fit: cover;
   box-shadow: 0 0 2px rgba(51, 51, 51, 0.376);
 }
+.left__part label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  background: transparent;
+  color: #a40000;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 9px 0;
+  transition: 0.2s;
+  z-index: 10;
+  cursor: pointer;
+}
+
+
+
+
 .right__part {
   text-align: center;
   padding: 20px 40px;
@@ -53,27 +70,128 @@
 .right__part textarea {
   width: 100%;
   margin-bottom: -6px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .right__part button {
   margin: 5px 0;
   float: right;
 }
-.right__part h4 {
-  margin: 60px 0 10px;
+
+.follow__container {
+  margin-top: 50px;
+  align-items: center;
 }
 .right__part h5 {
   background: transparent;
-  color: black;
+  color: #a40000;
   font-family: "Quicksand", sans-serif;
-  margin: 20px 0;
-  padding: 12px;
-  font-size: 1.1rem;
+  margin: 5px 0;
+  font-size: 1rem;
   border-radius: 20px;
   transition: 0.2s;
   cursor: pointer;
+  width: 200px;
+  height: 30px;
+  border: 2px solid #a40000;
 }
-.right__part h5:hover{
+.right__part h5:hover {
   filter: brightness(110%);
   transform: translateX(2px);
 }
+
+
+
+.popupProfil__container {
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: fixed;
+  animation: popup 1s forwards;
+}
+@keyframes popup {
+  to {
+    backdrop-filter: blur(2px);
+ }
+}
+.popupProfil__container .modal {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-100%);
+  background: #ffd0c4;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 2px rgba(131, 130, 130, 0.356);
+  overflow: auto;
+  transform: scaleY(0);
+  transform-origin: center;
+  animation: modal 0.5s forwards;
+}
+.popupProfil__container .modal h3 {
+  min-width: 200px;
+}
+@keyframes modal {
+  to {
+    transform: scale(1) translate(-50%);
+ }
+}
+.popupProfil__container .modal .cross {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+.popupProfil__container .modal .cross:hover {
+  transform: scale(1.07);
+}
+.popupProfil__container .modal ul {
+  margin: 20px 0 0;
+  max-height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.popupProfil__container .modal ul::-webkit-scrollbar {
+  width: 2px;
+}
+.popupProfil__container .modal ul::-webkit-scrollbar-track {
+  background: #fdeeee;
+}
+.popupProfil__container .modal ul::-webkit-scrollbar-thumb {
+  background: #ff7b77;
+}
+.popupProfil__container .modal ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.popupProfil__container .modal ul li {
+  display: grid;
+  grid-template-columns: 64px 1fr 114px;
+  align-items: center;
+  margin: 10px 0;
+}
+.popupProfil__container .modal ul li img {
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 2px rgba(51, 51, 51, 0.376);
+}
+.popupProfil__container .modal ul li h4 {
+  text-align: left;
+  min-width: 210px;
+}
+.popupProfil__container .modal ul li .follow-handler {
+  text-align: left;
+}
+.popupProfil__container .modal ul li .follow-handler button {
+  background: #fdeeee;
+  border-radius: 20px;
+  margin-right: 6px;
+}
+.popupProfil__container .modal ul li .follow-handler button:hover {
+  color: #00162c;
+  transform: translateX(2px);
+}
+
