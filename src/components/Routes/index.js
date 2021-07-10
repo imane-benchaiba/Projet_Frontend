@@ -5,6 +5,7 @@ import Accueil from "../../pages/Accueil";
 import SignIn from "../../pages/SignIn";
 import SignUp from "../../pages/SignUp";
 import Profil from '../../pages/Profil';
+import Home from "../../pages/Home";
 import Navbar from '../Navbar';
 
 const index = () => {
@@ -20,6 +21,9 @@ const index = () => {
           </Route>
           <Route path="/profil">
               <Profil/>
+          </Route>
+          <Route path="/home">
+              <Home/>
           </Route>
           <Route path="/">
               <Accueil />

@@ -1,0 +1,18 @@
+.home__container{
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: 60px 1fr 374px;
+  overflow: hidden;
+  margin: 58px auto 50px;
+  position: relative;
+}
+.thread__container{
+    background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  padding: 10px;
+}
