@@ -1,13 +1,13 @@
-.home__container{
+.home-container{
   display: grid;
   max-width: 1200px;
-  grid-template-columns: 60px 1fr 374px;
+  grid-template-columns: 100px 1fr 374px;
   overflow: hidden;
-  margin: 58px auto 50px;
+  margin-top: 10px;
   position: relative;
 }
-.thread__container{
-    background: white;
+.thread-container{
+  background: white;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
@@ -15,4 +15,144 @@
   );
   border-radius: 2rem;
   padding: 10px;
+}
+
+
+.home-header {
+  margin-bottom: 10px;
+  border-radius: 2rem;
+  padding: 10px;
+  position: relative;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+.post-container{
+  border: 2px solid #a40000;
+  padding: 16px;
+  border-radius: 20px;
+  margin: 10px auto;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+
+}
+.post-container img {
+  border-radius: 50px;
+  height: 52px;
+  width: 52px;
+  box-shadow: 2px 2px 2px rgba(51, 51, 51, 0.16);
+  object-fit: cover;
+}
+.post-container .post-form{
+  width: 100%;
+  margin-left: 10px;
+}
+
+.post-container .post-form .comment-form input {
+  width: 100%;
+  background: none;
+  border: solid 1px black;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 1.4rem;
+  height: 40px;
+
+}
+.post-container .post-form .card-container {
+  background: #fdfdfd;
+  border-radius: 20px 20px 6px 20px;
+}
+.post-container .post-form .card-container .card-left {
+  text-align: left;
+}
+.post-container .post-form .card-container .card-right .content {
+  padding: 6px 0;
+}
+.post-container .post-form .card-container .card-right .content p {
+  text-align: left;
+  margin: 2px 0 6px;
+  font-size: 1.1rem;
+}
+.post-container .post-form .card-container .card-right .content img {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 12px;
+}
+@media screen and (max-width: 632px) {
+  .post-container .post-form .card-container .card-right .content {
+    margin-top: 20px;
+ }
+}
+.post-container .post-form .footer-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.post-container .post-form .footer-form .icon img {
+  height: 22px;
+    width: 22px;
+    margin-right: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.post-container .post-form .footer-form .icon button {
+  width: 190px;
+  padding: 10px 20px;
+  background: #fdfdfd;
+  transition: 0.2s;
+}
+.post-container .post-form .footer-form .icon button:hover {
+  background: #00162c;
+}
+.post-container .post-form .footer-form .icon input {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  transform: translate(-5px, -30px);
+  opacity: 0;
+  cursor: pointer;
+}
+.post-container .post-form .footer-form .icon input::-webkit-file-upload-button {
+  cursor: pointer;
+}
+.post-container .post-form .footer-form p {
+  font-family: "font-3", serif;
+  margin-top: 4px;
+  color: red;
+}
+.post-container .post-form .footer-form .btn-send .cancel {
+  background: #a40000;
+	border: solid 1px #a40000;
+	border-radius: 20px 20px 20px 20px;
+  margin-right: 8px;
+  transition: 0.2s;
+  width: 150px;
+  height: 30px;
+}
+.post-container .post-form .footer-form .btn-send .send {
+  background: #a40000;
+	border: solid 1px #a40000;
+	border-radius: 20px 20px 20px 20px;
+  margin-right: 8px;
+  transition: 0.2s;
+  width: 100px;
+  height: 30px;
+  color: white;
+}
+.post-container .post-form .footer-form .btn-send .cancel:hover {
+  transform: translateX(2px);
+}
+.post-container .post-form .footer-form .btn-send .send:hover {
+  transform: translateX(2px);
+}
+@media screen and (max-width: 460px) {
+  .post-container .post-form .footer-form .btn-send button {
+    font-size: 0.8rem;
+    padding: 8px;
+ }
 }

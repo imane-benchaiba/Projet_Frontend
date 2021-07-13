@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
         <div className="navbar">
-            <p className="logo">Bookiner.dz</p>
+            <Link to="/" className="logo">Bookiner.dz</Link>
             {uid ? (
             <div className="nav__ext">
                 <p>Bienvenue {userData.pseudo}</p>
@@ -18,8 +18,7 @@ const Navbar = () => {
             </div>
             ) : (
             <nav>
-                <ul className="nav__links">                      
-                    <li><Link to="/">Accueil</Link></li>      
+                <ul className="nav__links">                          
                     <li><Link to="/connexion"><button className="button__connexion">Connexion</button></Link></li>                    
                     <li><Link to="/inscription"><button className="button__inscription">Inscription</button></Link></li>
                 </ul>

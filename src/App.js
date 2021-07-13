@@ -26,7 +26,7 @@ const App = () => {
     if (uid) dispatch(getUser(uid));
   }, [uid, dispatch]);
   return (
-    <div className="app">
+    <div className={uid ? "app" : "app-client"}>
       <UidContext.Provider value={uid}>
         <Routes />
       </UidContext.Provider>

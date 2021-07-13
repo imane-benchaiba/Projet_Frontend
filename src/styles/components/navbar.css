@@ -5,14 +5,23 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
 }
 
-.app {
+.app-client {
   min-height: 100vh;
   width: 100%;
   background-image: url("../../img/background4.jpg");
   background-position: center top;
-  background-size: cover;
+  background-size: cover; 
+}
+.app{
+  min-height: 100vh;
+  width: 100%;
+  background: rgb(233, 181, 105);
+  background-image: none;
+  background-position: center top;
+  background-size: cover; 
 }
 
 li,
@@ -36,6 +45,7 @@ link,
   justify-content: flex-end;
   align-items: center;
   padding: 10px 10%;
+
 }
 
 .logo {
@@ -43,8 +53,9 @@ link,
   cursor: pointer;
   margin-right: auto;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 30px;
   color: #a40000;
+  text-decoration: none;
 }
 .nav__ext {
   display: flex;
@@ -55,12 +66,12 @@ link,
 .nav__ext p {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 20px;
   color: black;
   padding-right: 50px;
 }
 .iconLogout{
-  width: 40px;
+  width: 30px;
   cursor: pointer;
 }
 .nav__links {

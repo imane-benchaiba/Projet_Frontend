@@ -8,7 +8,6 @@ import DeleteCard from "./DeleteCard";
 import CardComments from "./CardComments";
 import IconEdit from "../../img/icons/edit.svg";
 import IconMessage from "../../img/icons/message1.svg";
-import IconShare from "../../img/icons/share.svg";
 
 
 const Card = ({ post }) => {
@@ -32,7 +31,7 @@ const Card = ({ post }) => {
   }, [usersData]);
 
   return (
-    <li className="card__container" key={post._id}>
+    <li className="card-container" key={post._id}>
       {isLoading ? (
         <i className="fas fa-spinner fa-spin"></i>
       ) : (
@@ -77,7 +76,7 @@ const Card = ({ post }) => {
                   onChange={(e) => setTextUpdate(e.target.value)}
                 />
                 <div className="button-container">
-                  <button className="bouton__form" onClick={updateItem}>
+                  <button className="btn" onClick={updateItem}>
                     Valider modification
                   </button>
                 </div>
@@ -94,6 +93,8 @@ const Card = ({ post }) => {
                 <DeleteCard id={post._id} />
               </div>
             )}
+
+            
             <div className="card-footer">
               <div className="comment-icon">
                 <img
@@ -104,7 +105,6 @@ const Card = ({ post }) => {
                 <span>{post.comments.length}</span>
               </div>
               <LikeButton post={post} />
-              <img src={IconShare} alt="share" />
             </div>
             {showComments && <CardComments post={post} />}
           </div>
