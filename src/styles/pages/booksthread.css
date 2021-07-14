@@ -1,0 +1,87 @@
+.books-thread-container{
+    display: grid;
+  width: 100%;
+  grid-template-columns: 100px 1fr 100px;
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+}
+.books-thread{
+
+}
+.books-thread-header{
+  display: flex;
+  justify-content: center;
+}
+.books-thread-main{
+    background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  padding: 10px;
+}
+.card-book-container{
+  display: flex;
+  flex-direction: column;
+  
+  border: 2px solid #a40000;
+  padding: 16px;
+  border-radius: 20px;
+  margin: 8px auto;
+  position: relative;
+  height: auto;
+}
+.card-book-main{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.card-book-main .card-left{
+  
+}
+.card-book-main .card-left .card-book{
+  width: 100%;
+	height: 100%;
+    box-shadow: 0 0 3px rgba(51, 51, 51, 0.342);
+}
+.card-book-main .card-right{
+  padding:10px;
+}
+.card-book-main .card-right .book-abstract{
+  text-align: justify;
+}
+.card-book-footer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+.card-book-footer .select-book{
+  margin-left: 30px;
+  margin-right: 50px;
+  
+}
+.card-book-footer .select-book select{
+  border-radius: 50px;
+  background: white;
+  border: solid 2px #a40000;
+  color: #a40000;
+  height: 30px;
+}
+.card-book-footer .comment-icon img{
+  height: 22px;
+	 width: 22px;
+	 margin-right: 40px;
+	 cursor: pointer;
+	 transition: 0.2s;
+}
+.card-book-footer .comment-icon img:hover{
+  transform: scale(1.2);
+}
+.card-book-footer .comment-icon span{
+  font-size: 1.02rem;
+	 position: absolute;
+	 transform: translate(-32px, 0px);
+}

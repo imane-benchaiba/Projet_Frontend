@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addComment, getPosts } from "../../actions/post.actions";
+import { addComment, getBooks } from "../../actions/book.actions";
 import FollowHandler from "../Profil/FollowHandler";
 import { isEmpty, timestampParser } from "../Utils";
-import EditDeleteComment from "./EditDeleteComment";
+import EditDeleteBookComment from "./EditDeleteBookComment";
 
-const CardComments = ({ post }) => {
+const CardBookComments = ({ book }) => {
   const [text, setText] = useState("");
   const usersData = useSelector((state) => state.usersReducer);
   const userData = useSelector((state) => state.userReducer);
@@ -15,15 +15,15 @@ const CardComments = ({ post }) => {
     e.preventDefault();
 
     if (text) {
-      dispatch(addComment(post._id, userData._id, text, userData.pseudo))
-        .then(() => dispatch(getPosts()))
+      dispatch(addComment(book._id, userData._id, text, userData.pseudo))
+        .then(() => dispatch(getBooks()))
         .then(() => setText(''));
     }
   };
 
   return (
-    <div>
-      {post.comments.map((comment) => {
+    <div className="comments-container">
+      {book.comments.map((comment) => {
         return (
           <div
             className={
@@ -61,7 +61,7 @@ const CardComments = ({ post }) => {
                 <span>{timestampParser(comment.timestamp)}</span>
               </div>
               <p>{comment.text}</p>
-              <EditDeleteComment comment={comment} postId={post._id} />
+              <EditDeleteBookComment comment={comment} bookId={book._id} />
             </div>
           </div>
         );
@@ -83,4 +83,4 @@ const CardComments = ({ post }) => {
   );
 };
 
-export default CardComments;
+export default CardBookComments;

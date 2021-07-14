@@ -7,15 +7,17 @@ import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk'; 
 import rootReducer from './reducers';
 import { getUsers } from './actions/users.actions';
-
+import { getBooks } from './actions/book.actions';
 // dev tools
 import { composeWithDevTools } from 'redux-devtools-extension';
+
 
 const store = createStore(
   rootReducer, composeWithDevTools(applyMiddleware(thunk))
 )
 
 store.dispatch(getUsers());
+store.dispatch(getBooks());
 
 ReactDOM.render(
     <Provider store={store}>

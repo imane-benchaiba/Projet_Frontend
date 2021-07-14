@@ -132,12 +132,12 @@
 	 position: absolute;
 	 transform: translate(30px, 0px);
 }
- .card-container .card-right .comment-container.client {
+ .comment-container.client {
 	background: white;
 	border: 1px solid black;
 	 border-radius: 20px 20px 20px 6px;
 }
- .card-container .card-right .comment-container {
+.comment-container {
 	 display: grid;
 	 grid-template-columns: 50px 1fr;
 	 background: white;
@@ -146,7 +146,7 @@
 	 margin: 5px 0;
 	 border-radius: 20px;
 }
- .card-container .card-right .comment-container img {
+.comment-container img {
 	 height: 35px;
 	 width: 35px;
 	 border-radius: 50px;
@@ -154,39 +154,39 @@
 	 object-fit: cover;
 }
 
- .card-container .card-right .comment-container .comment-header {
+.comment-container .comment-header {
 	 display: flex;
 	 justify-content: space-between;
 }
 
- .card-container .card-right .comment-container .comment-header .pseudo {
+.comment-container .comment-header .pseudo {
 	 display: flex;
 }
- .card-container .card-right .comment-container .comment-header .pseudo h3 {
+.comment-container .comment-header .pseudo h3 {
 	 font-family:"Quicksand", sans-serif;
 	 font-size: 18px;
 }
- .card-container .card-right .comment-container .comment-header .pseudo span {
+.comment-container .comment-header .pseudo span {
 	 transform: translate(6px, 4px);
 	 cursor: pointer;
 }
- .card-container .card-right .comment-container .comment-header .pseudo span img {
+.comment-container .comment-header .pseudo span img {
 	 box-shadow: none;
 	 height: 15px;
 	 width: 15px;
 }
- .card-container .card-right .comment-container .comment-header span {
+ .comment-container .comment-header span {
 	 font-size: 10px;
 	 font-style: italic;
 	 font-family: "Quicksand", sans-serif;
 }
- .card-container .card-right .comment-container p {
+.comment-container p {
 	 margin-top: 8px;
 }
- .card-container .card-right .comment-container .edit-comment {
+.comment-container .edit-comment {
 	 color: #ffd0c4;
 }
- .card-container .card-right .comment-container .edit-comment img {
+.comment-container .edit-comment img {
 	 float: right;
 	 margin-left: 10px;
 	 cursor: pointer;
@@ -195,12 +195,12 @@
 	 height: 20px;
 	 width: 20px;
 }
- .card-container .card-right .comment-container .edit-comment img:hover {
+.comment-container .edit-comment img:hover {
 	 transform: scale(1.1);
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form {
+.comment-container .edit-comment .edit-comment-form {
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form label {
+.comment-container .edit-comment .edit-comment-form label {
 	 background: #fdfdfd;
 	 color: #a40000;
 	 border-radius: 20px 20px 20px 6px;
@@ -208,10 +208,10 @@
 	 transition: 0.2s;
 	 display: inline-block;
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form label:hover {
+.comment-container .edit-comment .edit-comment-form label:hover {
 	 transform: scale(1.05);
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form input[type="text"] {
+.comment-container .edit-comment .edit-comment-form input[type="text"] {
 	 
 	 margin: 4px 0;
 	 background: #fdfdfd;
@@ -221,12 +221,12 @@
 	 border-radius: 20px;
 	 border: solid 1px black;
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form .btn {
+.comment-container .edit-comment .edit-comment-form .btn {
 	 display: flex;
 	 align-items: center;
 	 float: right;
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form .btn span {
+.comment-container .edit-comment .edit-comment-form .btn span {
 	 background: #fdfdfd;
 	 padding: 10px 5px;
 	 border-radius: 50px;
@@ -234,13 +234,13 @@
 	 transition: 0.2s;
 	 cursor: pointer;
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form .btn span:hover {
+.comment-container .edit-comment .edit-comment-form .btn span:hover {
 	 background: #ffd0c4;
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form .btn span img {
+.comment-container .edit-comment .edit-comment-form .btn span img {
 	 transform: translate(-5px, 0);
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form .btn input[type="submit"] {
+.comment-container .edit-comment .edit-comment-form .btn input[type="submit"] {
 	 width: 200px;
 	 background: #a40000;
 	 color: white;
@@ -248,14 +248,14 @@
 	 transition: 0.2s;
 	 float: right;
 }
- .card-container .card-right .comment-container .edit-comment .edit-comment-form .btn input[type="submit"]:hover {
+.comment-container .edit-comment .edit-comment-form .btn input[type="submit"]:hover {
 	 background: #a40000;
 	 transform: translateX(2px);
 }
- .card-container .card-right .comment-form {
+.comment-form {
 	 margin-top: 6px;
 }
- .card-container .card-right .comment-form input[type="text"] {
+.comment-form input[type="text"] {
 	 width: 100%;
 	 background: none;
 	 border: solid 1px black;
@@ -263,10 +263,10 @@
 	 padding: 10px;
 	 font-size: 1.4rem;
 }
- .card-container .card-right .comment-form input[type="text"]:focus {
+.comment-form input[type="text"]:focus {
 	 box-shadow: 0 0 2px rgba(51, 51, 51, 0.5);
 }
- .card-container .card-right .comment-form input[type="submit"] {
+.comment-form input[type="submit"] {
 	 
 	 width: 120px;
 	 background: #a40000;
@@ -275,16 +275,16 @@
 	 transition: 0.2s;
 	 float: right;
 }
- .card-container .card-right .comment-form input[type="submit"]:hover {
+.comment-form input[type="submit"]:hover {
 	 background: #a40000;
 	 transform: translateX(2px);
 }
- .card-container .card-right .comment-form button {
+.comment-form button {
 	 float: right;
 	 background:#a40000;
 	 transition: 0.2s;
 }
- .card-container .card-right .comment-form button:hover {
+.comment-form button:hover {
 	 background: #ffd0c4;
 }
  .card-container .card-right .like-container span {
