@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 import { getUsers } from './actions/users.actions';
 import { getBooks } from './actions/book.actions';
+import { getAuthors } from './actions/author.actions';
 // dev tools
 import { composeWithDevTools } from 'redux-devtools-extension';
 
@@ -18,6 +19,7 @@ const store = createStore(
 
 store.dispatch(getUsers());
 store.dispatch(getBooks());
+store.dispatch(getAuthors());
 
 ReactDOM.render(
     <Provider store={store}>
