@@ -1,5 +1,5 @@
-.books-thread-container{
-    display: grid;
+.books-thread-container {
+  display: grid;
   width: 100%;
   grid-template-columns: 100px 1fr 100px;
   overflow: hidden;
@@ -7,12 +7,12 @@
   position: relative;
 }
 
-.books-thread-header{
+.books-thread-header {
   display: flex;
   justify-content: center;
 }
-.books-thread-main{
-    background: white;
+.books-thread-main {
+  background: white;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
@@ -21,10 +21,10 @@
   border-radius: 2rem;
   padding: 10px;
 }
-.card-book-container{
+.card-book-container {
   display: flex;
   flex-direction: column;
-  
+
   border: 2px solid #a40000;
   padding: 16px;
   border-radius: 20px;
@@ -32,64 +32,68 @@
   position: relative;
   height: auto;
 }
-.card-book-main{
+.card-book-main {
   display: grid;
   grid-template-columns: 200px 1fr;
 }
 
-.card-book-main .card-left .card-book{
+.card-book-main .card-left .card-book {
   width: 100%;
-	height: 100%;
-    box-shadow: 0 0 3px rgba(51, 51, 51, 0.342);
+  height: 100%;
+  box-shadow: 0 0 3px rgba(51, 51, 51, 0.342);
 }
-.card-book-main .card-right{
-  padding:10px;
+.card-book-main .card-right {
+  padding: 10px;
 }
-.card-book-main .card-right .book-author{
+.card-book-main .card-right .book-author {
   cursor: pointer;
 }
-.card-book-main .card-right .book-author:hover{
+.card-book-main .card-right .book-author:hover {
   color: #a40000;
 }
-.card-book-main .card-right .book-abstract{
+.card-book-main .card-right .book-abstract {
   text-align: justify;
 }
+
 .card-book-footer {
   display: flex;
   flex-direction: row;
   padding-top: 10px;
 }
-.card-book-footer .select-book{
-  margin-left: 30px;
-  margin-right: 50px;
-  
-}
-.card-book-footer .select-book select{
-  border-radius: 50px;
-  background: white;
-  border: solid 2px #a40000;
-  color: #a40000;
+.card-book-footer button {
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  background: #a40000;
+  border: solid 1px #a40000;
+  width: 180px;
   height: 30px;
+  margin-left: 10px;
+  margin-right: 40px;
 }
-.card-book-footer .comment-icon img{
+.card-book-footer button:hover {
+  color: #a40000;
+  background: white;
+}
+
+.card-book-footer .comment-icon img {
   height: 22px;
-	 width: 22px;
-	 margin-right: 40px;
-	 cursor: pointer;
-	 transition: 0.2s;
+  width: 22px;
+  margin-right: 40px;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.card-book-footer .comment-icon img:hover{
+.card-book-footer .comment-icon img:hover {
   transform: scale(1.2);
 }
-.card-book-footer .comment-icon span{
+.card-book-footer .comment-icon span {
   font-size: 1.02rem;
-	 position: absolute;
-	 transform: translate(-32px, 0px);
+  position: absolute;
+  transform: translate(-32px, 0px);
 }
 
-
-
-.popup-card-book-container {
+.popup-author-container,
+.popup-friend-container {
   z-index: 200;
   width: 100%;
   top: 0;
@@ -103,7 +107,8 @@
     backdrop-filter: blur(2px);
   }
 }
-.popup-card-book-container .modal {
+.popup-author-container .modal,
+.popup-friend-container .modal {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -117,7 +122,7 @@
   transform-origin: center;
   animation: modal 0.5s forwards;
 }
-.popup-card-book-container .modal h3 {
+.popup-author-container .modal h3 {
   min-width: 200px;
 }
 @keyframes modal {
@@ -125,55 +130,67 @@
     transform: scale(1) translate(-50%);
   }
 }
-.popup-card-book-container .modal .cross {
+.popup-author-container .modal .cross,
+.popup-friend-container .modal .cross {
   position: absolute;
   top: 25px;
   right: 25px;
   transition: 0.1s;
   cursor: pointer;
 }
-.popup-card-book-container .modal .cross:hover {
+.popup-author-container .modal .cross:hover,
+.popup-friend-container .modal .cross:hover {
   transform: scale(1.07);
 }
-.popup-card-book-container .modal ul {
+.popup-author-container .modal ul,
+.popup-friend-container .modal .ul {
   padding-right: 15px;
   min-height: 200px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.popup-card-book-container .modal ul::-webkit-scrollbar {
+.popup-author-container .modal ul::-webkit-scrollbar,
+.popup-friend-container .modal ul::-webkit-scrollbar {
   width: 2px;
 }
-.popup-card-book-container .modal ul::-webkit-scrollbar-track {
+.popup-author-container .modal ul::-webkit-scrollbar-track,
+.popup-friend-container .modal ul::-webkit-scrollbar-track {
   background: #fdeeee;
 }
-.popup-card-book-container .modal ul::-webkit-scrollbar-thumb {
+.popup-author-container .modal ul::-webkit-scrollbar-thumb,
+.popup-friend-container .modal ul::-webkit-scrollbar-thumb {
   background: #a40000;
 }
-.popup-card-book-container .modal ul::-webkit-scrollbar-thumb:hover {
+.popup-author-container .modal ul::-webkit-scrollbar-thumb:hover,
+.popup-friend-container .modal ul::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-.popup-card-book-container .modal ul li {
+.popup-author-container .modal ul li,
+.popup-friend-container .modal ul li {
   display: grid;
   grid-template-columns: 64px 1fr;
   margin: 10px 0;
 }
-.popup-card-book-container .modal ul li .author-pic{
+.popup-author-container .modal ul li .author-pic,
+.popup-friend-container .modal ul li .friend-pic {
   padding-top: 0px;
 }
-.popup-card-book-container .modal ul li .author-bio{
+.popup-author-container .modal ul li .author-bio,
+.popup-friend-container .modal ul li .friend-bio {
   text-align: justify;
   border-right: 10px;
+  height: auto;
 }
-.popup-card-book-container .modal ul li img {
+.popup-author-container .modal ul li img,
+.popup-friend-container .modal ul li img {
   height: 40px;
   width: 40px;
   border-radius: 50px;
   object-fit: cover;
   box-shadow: 0 0 2px rgba(51, 51, 51, 0.376);
 }
-.popup-card-book-container .modal ul li h4 {
+.popup-author-container .modal ul li h4,
+.popup-friend-container .modal ul li h4 {
   text-align: left;
   min-width: 210px;
 }
-

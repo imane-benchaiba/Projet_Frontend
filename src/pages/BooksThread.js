@@ -8,8 +8,27 @@ import CardBook from "../components/Book/CardBook";
 const BooksThread = () => {
   const [loadBook, setLoadBook] = useState(true);
   const [count, setCount] = useState(5);
+  const [search, setSearch] = useState(false);
+  const [book, setBook] = useState("");
   const dispatch = useDispatch();
   const books = useSelector((state) => state.bookReducer);
+
+  const searchBook = () => {
+    const bookToSearch = document.getElementById("search").value;
+    books.map((book) => {
+      if(book.bookName === bookToSearch){
+        return (
+          <div className="books-thread-main">
+          <ul> 
+            {setSearch(true)}
+            {setBook(book)}
+            
+          </ul>
+        </div>          
+        )
+      }
+    })    
+  }
 
   const loadMore = () => {
     if (
@@ -40,12 +59,15 @@ const BooksThread = () => {
           <div className="search__container">
             <input
               className="search__input"
-              type="text"
+              type="search"
+              id='search'
               placeholder="Chercher un livre, un auteur..."
+              onChange={searchBook}
             ></input>
           </div>
         </div>
         
+        {search === false && (
         <div className="books-thread-main">
           <ul>
             {!isEmpty(books[0]) &&
@@ -54,6 +76,14 @@ const BooksThread = () => {
               })}
           </ul>
         </div>
+        )}
+        {search && (
+          <div className="books-thread-main">
+          <ul>
+          <CardBook book={book}/>
+          </ul>
+        </div>
+        )}
       </div>
     </div>
   );
