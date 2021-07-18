@@ -1,4 +1,4 @@
-.home-container{
+.home-container {
   display: grid;
   max-width: 1200px;
   grid-template-columns: 100px 1fr 374px;
@@ -6,7 +6,7 @@
   margin-top: 10px;
   position: relative;
 }
-.thread-container{
+.thread-container {
   background: white;
   background: linear-gradient(
     to right bottom,
@@ -16,7 +16,6 @@
   border-radius: 2rem;
   padding: 10px;
 }
-
 
 .home-header {
   margin-bottom: 10px;
@@ -29,7 +28,7 @@
     rgba(255, 255, 255, 0.3)
   );
 }
-.post-container{
+.post-container {
   border: 2px solid #a40000;
   padding: 16px;
   border-radius: 20px;
@@ -37,7 +36,6 @@
   min-height: 100px;
   display: flex;
   flex-direction: row;
-
 }
 .post-container img {
   border-radius: 50px;
@@ -46,7 +44,7 @@
   box-shadow: 2px 2px 2px rgba(51, 51, 51, 0.16);
   object-fit: cover;
 }
-.post-container .post-form{
+.post-container .post-form {
   width: 100%;
   margin-left: 10px;
 }
@@ -59,7 +57,6 @@
   padding: 10px;
   font-size: 1.4rem;
   height: 40px;
-
 }
 .post-container .post-form .card-container {
   background: #fdfdfd;
@@ -84,7 +81,7 @@
 @media screen and (max-width: 632px) {
   .post-container .post-form .card-container .card-right .content {
     margin-top: 20px;
- }
+  }
 }
 .post-container .post-form .footer-form {
   display: flex;
@@ -95,10 +92,10 @@
 
 .post-container .post-form .footer-form .icon img {
   height: 22px;
-    width: 22px;
-    margin-right: 40px;
-    cursor: pointer;
-    transition: 0.2s;
+  width: 22px;
+  margin-right: 40px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 .post-container .post-form .footer-form .icon button {
   width: 190px;
@@ -117,7 +114,11 @@
   opacity: 0;
   cursor: pointer;
 }
-.post-container .post-form .footer-form .icon input::-webkit-file-upload-button {
+.post-container
+  .post-form
+  .footer-form
+  .icon
+  input::-webkit-file-upload-button {
   cursor: pointer;
 }
 .post-container .post-form .footer-form p {
@@ -127,8 +128,8 @@
 }
 .post-container .post-form .footer-form .btn-send .cancel {
   background: #a40000;
-	border: solid 1px #a40000;
-	border-radius: 20px 20px 20px 20px;
+  border: solid 1px #a40000;
+  border-radius: 20px 20px 20px 20px;
   margin-right: 8px;
   transition: 0.2s;
   width: 150px;
@@ -136,8 +137,8 @@
 }
 .post-container .post-form .footer-form .btn-send .send {
   background: #a40000;
-	border: solid 1px #a40000;
-	border-radius: 20px 20px 20px 20px;
+  border: solid 1px #a40000;
+  border-radius: 20px 20px 20px 20px;
   margin-right: 8px;
   transition: 0.2s;
   width: 100px;
@@ -154,5 +155,117 @@
   .post-container .post-form .footer-form .btn-send button {
     font-size: 0.8rem;
     padding: 8px;
- }
+  }
+}
+
+.home-container .right-side {
+  position: relative;
+  width: 100%;
+  margin: 0px 0 0 14px;
+}
+.home-container .right-side .right-side-container {
+  position: fixed;
+  width: 450px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  padding: 10px;
+}
+
+.get-friends-container,
+.get-books-container {
+  border: 2px solid #a40000;
+  padding: 16px 16px 1px;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+.get-friends-container h4,
+.get-books-container h4 {
+  font-size: 1.4rem;
+  color: black;
+}
+.get-friends-container .icon,
+.get-books-container .icon {
+  margin: 16px auto;
+  width: 100%;
+  text-align: center;
+}
+.get-friends-container .icon i,
+.get-books-container .icon i {
+  font-size: 1.6rem;
+  color: #00162c;
+}
+.get-friends-container ul,
+.get-books-container ul {
+  width: 100%;
+  padding: 14px;
+}
+.get-friends-container ul .user-hint,
+.get-books-container ul .book-hint {
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.get-friends-container ul .user-hint img {
+  height: 46px;
+  width: 46px;
+  border-radius: 50px;
+  object-fit: cover;
+  box-shadow: 0 0 2px rgba(51, 51, 51, 0.377);
+}
+.get-books-container ul .book-hint img {
+  height: 46px;
+  width: 46px;
+  object-fit: cover;
+  box-shadow: 0 0 2px rgba(51, 51, 51, 0.377);
+}
+
+.get-friends-container ul .user-hint span,
+.get-books-container ul .book-hint span {
+  text-align: right;
+}
+.get-friends-container ul .user-hint span button,
+.get-books-container ul .book-hint .read-book-button,
+.get-books-container ul .book-hint .unread-book-button {
+  background: #a40000;
+  color: white;
+  padding: 10px 24px 8px;
+  transition: 0.2s;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: solid 1px #a40000;
+}
+.get-friends-container ul .user-hint span button:hover,
+.get-books-container ul .book-hint .read-book-button:hover,
+.get-books-container ul .book-hint .unread-book-button {
+  background: white;
+  color: #a40000;
+}
+
+.get-friends-container ul .user-hint .user-infos,
+.get-books-container ul .book-hint .book-infos {
+  display: flex;
+  flex-direction: column;
+}
+.get-friends-container ul .user-hint .user-infos .pseudo,
+.get-books-container ul .book-hint .book-infos .author-name {
+  font-size: 1.17em;
+  cursor: pointer;
+}
+.get-friends-container ul .user-hint .user-infos .pseudo:hover{
+  color: #a40000;
+}
+.get-friends-container ul .user-hint .user-infos .nbr-livres,
+.get-books-container ul .book-hint .book-infos .book-name {
+  font-size: 0.9em;
+}
+.get-books-container ul .book-hint .book-infos .author-name {
+  cursor: pointer;
+}
+.get-books-container ul .book-hint .book-infos .author-name:hover {
+  color: #a40000;
 }
