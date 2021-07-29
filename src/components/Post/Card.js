@@ -3,18 +3,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { dateParser, isEmpty } from "../Utils";
 import FollowHandler from "../Profil/FollowHandler";
 import LikeButton from "./LikeButton";
+import FriendPopup from "./FriendPopup";
 import { updatePost } from "../../actions/post.actions";
 import DeleteCard from "./DeleteCard";
 import CardComments from "./CardComments";
 import IconEdit from "../../img/icons/edit.svg";
 import IconMessage from "../../img/icons/message1.svg";
 
-
 const Card = ({ post }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isUpdated, setIsUpdated] = useState(false);
   const [textUpdate, setTextUpdate] = useState(null);
   const [showComments, setShowComments] = useState(false);
+  const [friendPopup, setFriendPopup] = useState(false);
   const usersData = useSelector((state) => state.usersReducer);
   const userData = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
@@ -53,7 +54,7 @@ const Card = ({ post }) => {
           <div className="card-right">
             <div className="card-header">
               <div className="pseudo">
-                <h3>
+                <h3 onClick={() => setFriendPopup(true)}>
                   {!isEmpty(usersData[0]) &&
                     usersData
                       .map((user) => {
@@ -66,8 +67,19 @@ const Card = ({ post }) => {
                   <FollowHandler idToFollow={post.posterId} type={"card"} />
                 )}
               </div>
+
               <span>{dateParser(post.createdAt)}</span>
             </div>
+            {friendPopup && (
+              <div className="popup-friend-container">
+                <div className="modal">
+                  <span className="cross" onClick={() => setFriendPopup(false)}>
+                    &#10005;
+                  </span>
+                  <FriendPopup posterId={post.posterId} />
+                </div>
+              </div>
+            )}
             {isUpdated === false && <p>{post.message}</p>}
             {isUpdated && (
               <div className="update-post">
@@ -94,7 +106,6 @@ const Card = ({ post }) => {
               </div>
             )}
 
-            
             <div className="card-footer">
               <div className="comment-icon">
                 <img

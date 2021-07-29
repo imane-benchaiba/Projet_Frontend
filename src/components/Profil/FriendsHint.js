@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { isEmpty } from "../Utils";
 import FollowHandler from "./FollowHandler";
-import FriendPopup from "../Post/FriendPopup";
 
 const FriendsHint = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -10,7 +9,6 @@ const FriendsHint = () => {
   const [friendsHint, setFriendsHint] = useState([]);
   const userData = useSelector((state) => state.userReducer);
   const usersData = useSelector((state) => state.usersReducer);
-  const [friendPopup, setFriendPopup] = useState(false);
 
   useEffect(() => {
     const notFriendList = () => {
@@ -60,7 +58,6 @@ const FriendsHint = () => {
                       <div className="user-infos">
                         <p
                           className="pseudo"
-                          onClick={() => setFriendPopup(true)}
                         >
                           {usersData[i].pseudo}
                         </p>
@@ -74,19 +71,6 @@ const FriendsHint = () => {
                         idToFollow={usersData[i]._id}
                         type={"suggestion"}
                       />
-                      {friendPopup && (
-                          <div className="popup-friend-container">
-                            <div className="modal">
-                              <span
-                                className="cross"
-                                onClick={() => setFriendPopup(false)}
-                              >
-                                &#10005;
-                              </span>
-                              <FriendPopup posterId={user} />
-                            </div>
-                          </div>
-                        )}
                     </li>
                   );
                 }
