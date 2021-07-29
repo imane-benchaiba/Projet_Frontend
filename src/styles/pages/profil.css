@@ -5,7 +5,7 @@
   font-family: "Quicksand", sans-serif;
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 100px 1fr 374px;
   position: relative;
 }
 
@@ -27,31 +27,37 @@
 }
 .profil-container .update-container .updateParts-container {
   display: grid;
-  grid-template-columns: 500px 500px;
+  grid-template-columns: 575px 575px;
 }
 
-.profil-container .left-part {
+.profil-container .top-part {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-right: 1px solid rgba(0, 0, 0, 0.4);
 }
-.profil-container .update-container .updateParts-container .left-part img {
+.profil-container .top-part .pic-part{
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+}
+.profil-container .update-container .updateParts-container .top-part img {
   height: 100px;
   width: 100px;
   border-radius: 50px;
   object-fit: cover;
   box-shadow: 0 0 2px rgba(51, 51, 51, 0.376);
 }
-.profil-container .update-container .updateParts-container .left-part form {
+.profil-container .update-container .updateParts-container .top-part form {
   position: relative;
 }
 
 .profil-container
   .update-container
   .updateParts-container
-  .left-part
+  .top-part
   form
   label {
   font-family: "Quicksand", sans-serif;
@@ -74,7 +80,7 @@
 .profil-container
   .update-container
   .updateParts-container
-  .left-part
+  .top-part
   form
   label:hover {
   background-color: #c80000;
@@ -83,33 +89,48 @@
 .profil-container
   .update-container
   .updateParts-container
-  .left-part
+  .top-part
   form
   input[type="file"] {
   display: none;
 }
+.button-submit{
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  background: #a40000;
+  border: #a40000;
+}
+.button-submit:hover{
+  background-color: #c80000;
+}
 
-.profil-container .right-part {
+.profil-container .bottom-part {
   text-align: center;
   padding: 20px 40px;
 }
-.profil-container .right-part h3 {
+.profil-container .bottom-part h3 {
   margin-bottom: 12px;
 }
-.profil-container .right-part p,
-.profil-container .right-part textarea {
+.profil-container .bottom-part p,
+.profil-container .bottom-part textarea {
   min-height: 80px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 20px 20px 6px 20px;
   padding: 10px 20px;
   font-size: 1.1rem;
 }
-.profil-container .right-part textarea {
+.profil-container .bottom-part textarea {
   width: 100%;
   margin-bottom: -6px;
   font-size: 1.1rem;
 }
-.profil-container .right-part button {
+.profil-container .bottom-part button {
   margin: 5px 0;
   float: right;
 }
@@ -118,7 +139,7 @@
   margin-top: 50px;
   align-items: center;
 }
-.profil-container .right-part h5 {
+.profil-container .bottom-part h5 {
   background: transparent;
   color: #a40000;
   font-family: "Quicksand", sans-serif;
@@ -131,7 +152,7 @@
   height: 30px;
   border: 2px solid #a40000;
 }
-.profil-container .right-part h5:hover {
+.profil-container .bottom-part h5:hover {
   filter: brightness(110%);
   transform: translateX(2px);
 }
@@ -234,3 +255,52 @@
 }
 
 
+.biblio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 30px 25px;
+}
+.biblio-container ul{
+  width: 100%;
+  padding: 14px;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.biblio-container ul .book-hint {
+  display: grid;
+  grid-template-columns: 20% 50%;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.biblio-container ul .book-hint img{
+  height: 80px;
+  width: 80px; 
+  object-fit: cover;
+  box-shadow: 0 0 2px rgba(51, 51, 51, 0.377);
+}
+.biblio-container ul .book-hint .book-infos{
+  display: flex;
+  flex-direction: column;
+}
+.biblio-container ul .book-hint .book-infos .author-name{
+  font-size: 1.17em;
+  cursor: pointer;
+}
+.biblio-container ul .book-hint .book-infos .author-name:hover{
+  color: #a40000;
+}
+
+.biblio-container ul::-webkit-scrollbar {
+  width: 4px;
+}
+.biblio-container ul::-webkit-scrollbar-track {
+  background: #fdeeee;
+}
+.biblio-container ul::-webkit-scrollbar-thumb {
+  background: #a40000;
+}
+.biblio-container ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

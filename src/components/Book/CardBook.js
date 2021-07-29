@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
 import IconMessage from "../../img/icons/message1.svg";
+import AuthorPopup from "./AuthorPopup";
 import CardBookComments from "./CardBookComments";
+import AddBookHandler from "./AddBookHandler";
 
 const CardBook = ({ book }) => {
   const [showComments, setShowComments] = useState(false);
   const [authorPopup, setAuthorPopup] = useState(false);
-  const authorData = useSelector((state) => state.authorReducer);
   return (
     <li className="card-book-container" key={book._id}>
       <div className="card-book-main">
@@ -36,42 +36,19 @@ const CardBook = ({ book }) => {
       </div>
 
       {authorPopup && (
-        <div className="popup-card-book-container">
+        <div className="popup-author-container">
           <div className="modal">
             <span className="cross" onClick={() => setAuthorPopup(false)}>
               &#10005;
             </span>
-            <ul>
-              {authorData.map((author) => {
-                  if (book.author === author.authorName) {
-                return (
-                  <li key={author._id}>
-                    <div className="author-pic">
-                    <img src={author.picture} alt="user-pic" />
-                    </div>
-                    <div>
-                    <h3>{author.authorName}</h3>
-                    <h4>Né(e) le {author.birthday} en {author.country}</h4>
-                    <br/>
-                    <h4>Biographie :</h4>
-                    <h5 className="author-bio">{author.bio}</h5>
-                    </div>
-                  </li>
-                ); } return null;
-              })}
-            </ul>
+            <AuthorPopup book={book} />
           </div>
         </div>
       )}
 
       <div className="card-book-footer">
-        <div class="select-book">
-          <select>
-            <option value="1">Want to read</option>
-            <option value="2">Read</option>
-            <option value="3">Currently reading</option>
-          </select>
-        </div>
+      <AddBookHandler idRead={book._id} type={"card"} />  
+
         <div className="comment-icon">
           <img
             onClick={() => setShowComments(!showComments)}

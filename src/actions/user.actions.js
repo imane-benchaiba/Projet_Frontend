@@ -5,6 +5,12 @@ export const UPLOAD_PICTURE = "UPLOAD_PICTURE";
 export const UPDATE_BIO = "UPDATE_BIO";
 export const FOLLOW_USER = "FOLLOW_USER";
 export const UNFOLLOW_USER = "UNFOLLOW_USER";
+export const CURRENTLY_READING = "CURRENTLY_READING";
+export const READ = "READ";
+export const WANT_TO_READ = "WANT_TO_READ";
+export const UNCURRENTLY_READING = "UNCURRENTLY_READING";
+export const UNREAD = "UNREAD";
+export const UNWANT_TO_READ= "UNWANT_TO_READ";
 
 export const getUser = (uid) => {
     return (dispatch) => {
@@ -56,7 +62,6 @@ export const followUser = (followerId, idToFollow) => {
       .catch((err) => console.log(err));
   };
 };
-
 export const unfollowUser = (followerId, idToUnfollow) => {
   return (dispatch) => {
     return axios({
@@ -71,3 +76,84 @@ export const unfollowUser = (followerId, idToUnfollow) => {
   };
 };
   
+
+
+export const currentlyReading = (id, idCr) => {
+  return (dispatch) => {
+    return axios({
+      method: "patch",
+      url: `${process.env.REACT_APP_API_URL}api/user/currentlyreading/` + id,
+      data: { idCr },
+    })
+      .then((res) => {
+        dispatch({ type: CURRENTLY_READING, payload: { idCr } });
+      })
+      .catch((err) => console.log(err));
+  };
+};
+export const read = (id, idRead) => {
+  return (dispatch) => {
+    return axios({
+      method: "patch",
+      url: `${process.env.REACT_APP_API_URL}api/user/read/` + id,
+      data: { idRead },
+    })
+      .then((res) => {
+        dispatch({ type: READ, payload: { idRead } });
+      })
+      .catch((err) => console.log(err));
+  };
+};
+export const wantToRead = (id, idWtr) => {
+  return (dispatch) => {
+    return axios({
+      method: "patch",
+      url: `${process.env.REACT_APP_API_URL}api/user/wantoread/` + id,
+      data: { idWtr },
+    })
+      .then((res) => {
+        dispatch({ type: WANT_TO_READ, payload: { idWtr } });
+      })
+      .catch((err) => console.log(err));
+  };
+};
+
+export const unCurrentlyReading = (id, idUnCr) => {
+  return (dispatch) => {
+    return axios({
+      method: "patch",
+      url: `${process.env.REACT_APP_API_URL}api/user/uncurrentlyreading/` + id,
+      data: { idUnCr },
+    })
+      .then((res) => {
+        dispatch({ type: UNCURRENTLY_READING, payload: { idUnCr } });
+      })
+      .catch((err) => console.log(err));
+  };
+};
+export const unRead = (id, idUnRead) => {
+  return (dispatch) => {
+    return axios({
+      method: "patch",
+      url: `${process.env.REACT_APP_API_URL}api/user/unread/` + id,
+      data: { idUnRead },
+    })
+      .then((res) => {
+        dispatch({ type: UNREAD, payload: { idUnRead } });
+      })
+      .catch((err) => console.log(err));
+  };
+};
+export const unWantToRead = (id, idUnWtr) => {
+  return (dispatch) => {
+    return axios({
+      method: "patch",
+      url: `${process.env.REACT_APP_API_URL}api/user/unwanttoread/` + id,
+      data: { idUnWtr },
+    })
+      .then((res) => {
+        dispatch({ type: UNWANT_TO_READ, payload: { idUnWtr } });
+      })
+      .catch((err) => console.log(err));
+  };
+};

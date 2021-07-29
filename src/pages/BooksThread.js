@@ -80,7 +80,7 @@ const BooksThread = () => {
         {search && (
           <div className="books-thread-main">
           <ul>
-          <CardBook book={book}/>
+          <CardBook book={book} key={book._id}/>
           </ul>
         </div>
         )}

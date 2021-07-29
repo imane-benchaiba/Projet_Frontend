@@ -27,7 +27,7 @@ const UploadPicture = () => {
           onChange={(e) => setFile(e.target.files[0])}
         />
         <br />
-        <button type="submit" class="submit" className="bouton__form">
+        <button type="submit" class="submit" className="button-submit">
           Envoyer
         </button>
       </form>
