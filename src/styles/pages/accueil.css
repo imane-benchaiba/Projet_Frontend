@@ -53,7 +53,39 @@
   border-radius: 0;
   background-position: 100% center;
 }
+.random-img-container{
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  min-height: 55vh;
+  width: 100%;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+  margin: 20px;
+  
+}
+.img-container{
+  width: 230px;
+  height: 300px;
+  background-image:url("../../img/sharko.jpg");
 
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  0%   {background-image:url("../../img/sharko.jpg"); left:0px; top:0px;}
+  25%  {background-image:url("../../img/puzzle.jpg"); left:200px; top:0px;}
+  50%  {background-image:url("../../img/grimaldi.jpg"); left:200px; top:200px;}
+  75%  {background-image:url("../../img/lajeunefilleetlanuit.jpg"); left:0px; top:200px;}
+  100% {background-image:url("../../img/cequelejourdoitalanuit.jpg"); left:0px; top:0px;}
+}
 .third__container {
   display: flex;
   flex-direction: row;
