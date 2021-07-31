@@ -91,6 +91,14 @@
   position: absolute;
   transform: translate(-32px, 0px);
 }
+.card-book-footer .date{
+  font-style: italic;
+  font-size: 10px;
+  padding-left: 600px;
+}
+
+
+
 
 .popup-author-container,
 .popup-friend-container {

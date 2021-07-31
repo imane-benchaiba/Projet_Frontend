@@ -61,7 +61,7 @@ const BooksThread = () => {
               className="search__input"
               type="search"
               id='search'
-              placeholder="Chercher un livre, un auteur..."
+              placeholder="Chercher un livre..."
               onChange={searchBook}
             ></input>
           </div>

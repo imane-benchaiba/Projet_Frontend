@@ -3,6 +3,7 @@ import IconMessage from "../../img/icons/message1.svg";
 import AuthorPopup from "./AuthorPopup";
 import CardBookComments from "./CardBookComments";
 import AddBookHandler from "./AddBookHandler";
+import { dateParser } from "../Utils";
 
 const CardBook = ({ book }) => {
   const [showComments, setShowComments] = useState(false);
@@ -57,6 +58,7 @@ const CardBook = ({ book }) => {
           />
           <span>{book.comments.length}</span>
         </div>
+        <div className="date"> Publié le : { dateParser(book.createdAt)}</div>
       </div>
       {showComments && <CardBookComments book={book} />}
     </li>
