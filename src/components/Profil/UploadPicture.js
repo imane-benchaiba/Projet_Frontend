@@ -6,17 +6,33 @@ const UploadPicture = () => {
   const [file, setFile] = useState();
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userReducer);
+ // const [loading, setLoading] = useState(false);
+ // const [image, setImage] = useState("");
 
-  const handlePicture = (e) => {
+  const handlePicture = async (e) => {
     e.preventDefault();
     const data = new FormData();
     data.append("name", userData.pseudo);
     data.append("userId", userData._id);
     data.append("file", file);
+  /*  data.append("upload_preset", "project_images");
+    setLoading(true);
+
+    const res = await fetch("	https://api.cloudinary.com/v1_1/dxcbvhkmf/image/upload", {
+      method: 'POST',
+      body: data
+    });
+    
+    const fileRes = await res.json();
+    console.log(fileRes);
+    setImage(fileRes.secure_url);
+    setLoading(false); */
 
     dispatch(uploadPicture(data, userData._id));
   };
   return (
+    <>
+      
       <form action="" onSubmit={handlePicture} className="upload-pic">
         <label htmlFor="file">Changer l'image</label>
         <input
@@ -31,6 +47,7 @@ const UploadPicture = () => {
           Envoyer
         </button>
       </form>
+    </>
   );
 };
 
