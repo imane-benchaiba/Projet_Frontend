@@ -24,6 +24,7 @@ const Accueil = () => {
   };
 
   return (
+    <>
     <div className="accueil__container">
       <div>
         <p className="slogan">Trouvez votre prochaine lecture</p>
@@ -80,6 +81,8 @@ const Accueil = () => {
         </div>
       )}
     </div>
+    
+    </>
   );
 };
 

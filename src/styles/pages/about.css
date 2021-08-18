@@ -1,0 +1,14 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 250px;
+}
+.about-container > p{
+    font-size: 40px;
+}
+.about-container .apropos {
+    text-align: center;
+    font-size: 25px;
+}
